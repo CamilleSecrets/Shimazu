@@ -37,11 +37,17 @@ body{
         -webkit-background-size: cover; /* Para navegadores WebKit (Chrome, Safari) */
         -moz-background-size: cover; /* Para Firefox */
 }
-       .navbar-collapse {
-    display: flex;
-               position: absolute;
-           margin-top:170px;
-           margin-right:0px;
+     @media (max-width: 991px) { /* Aplica apenas no mobile */
+    .navbar-collapse {
+        display: flex;
+        flex-direction: column; /* Empilha os itens no mobile */
+        position: absolute;
+        top: 100%; /* Faz o menu aparecer abaixo do navbar */
+        right: 0; /* Alinha à direita */
+        width: auto; /* Mantém apenas o tamanho necessário */
+        padding: 10px;
+        border-radius: 5px;
+    }
 }
 
 
